@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_b7b5368fe57ec9837b4957f86216a6f64cd332a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_6d5dcafeead4bdb92662d89453fd3895bc32a24b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_f1922b7eb7f221c7cba3f25bfc40d40c0bbbe81b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_575e7a7abb221d4044940e7629743555a3fc8e8f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d666aa6dd5651c8e9b1c0f8ff47af2b9f5f922ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d0e2f30573d184a367c2f862947fbd1fbc322e4f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3eced63b4988178afa92313c2cbbfd2930c76fff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3020bda4699b4dff23cda8da8e26580a8d6e4093">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_902d4b20144f55c436c311671138e95423381a9d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_9ba2a0f938b3d26f877d4e42e289a06c9ecf0b19/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="308a67a01a93b4f64f62482d4e7b8a9378d238a4">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6a7bd01dc993f3f7a5f00908eb4002c260944e6c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_b9bbfe98a6dce7cd62b81fb7ef3112159e50a6fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_4b9869dccede3e440703b2cb07e64dba5eb7f5ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_bed5a1403c6b40eedb296b1d26f16e1af2107add/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_5a829a4e5bb35acbfc56ed5b8b6ff55b7b05e16b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_329ebfc34cbd43d7cd8b86d953ab36a130f3fba2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_1e51da5d33f7098ac39e327b57d506922c207fea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_b582993e5d078d6b2462000c38b6e0f27aca416f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b4a516df22d5d023285b93a1eef1d720b66415a8">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_08d2867936be2c71553f9137f90477b11505ac60/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f6deb9ae7614343e633e68404f7fe0ccb1bf8f70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_014527838fa902b86f3ce1e1267ee03b25667acd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_c96833425d13f00ada18e7101c5932cfb22d92b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_dbeb7268a714d785b943be2584f9a3665a79f9df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_34b04dfe7518905aa7bedad7e088764b9300a909/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_ff89ca76f8892cb9901f9d146d83b97fa52474a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_94038855c634cf40fed67029437e54b98dbc106c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_45127914db29a3f5aee975034b94d11fa403f0bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_51a86dd342c1005fb830a689273fc873d083834e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_f798d32d703263742de2a5a01a21168202bfe1d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8b59745464eaa80761ac9a3bc5c73e6ed2d8b1f1">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cdccb839de3e5a5f019d56cdaa25191294c704ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_0629da3a0a557252d32c24a1710aaae5d5930dd5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_70871b8af60010cb716e4940917aed4aa3b77e53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_61dbe2687922dd571d568b8eb3ec4c0bc2dc2827/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_1c8787909055ab8bef2622d7b8e40a451246b4d1/classes.dex" />
+    </item>
+
+</items>
