@@ -1,8 +1,9 @@
 package terstall.jeroenterstall_pset4;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class TodoList
+public class TodoList implements Serializable
 {
     private List<TodoItem> todolist;
     private String title;
@@ -41,6 +42,11 @@ public class TodoList
     protected void setTitle(String newtitle)
     {
         title = newtitle;
+    }
+
+    protected int size()
+    {
+        return todolist.size();
     }
 
 }

@@ -1,8 +1,8 @@
 package terstall.jeroenterstall_pset4;
 
 import android.content.DialogInterface;
-import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ContextThemeWrapper;
@@ -15,17 +15,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // Jeroen Terstall
 
 public class MainActivity extends AppCompatActivity
 {
     // Init variables for the listview and database
-    private TodoAdapter adapter;
-    private DBManager dbManager;
-    private Cursor cursor;
+    private TodoManager todomanager;
+    private ListsAdapter listsadapter;
+    private TodoAdapter todoadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,9 +30,23 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Retrieve database
-        dbManager = new DBManager(this);
-        dbManager.open();
+        todomanager = TodoManager.getInstance();
+
+        todomanager.readTodos(getApplicationContext());
+
+//        List<TodoItem> todo_items = new ArrayList<TodoItem>();
+//        TodoList todolist = new TodoList(todo_items, "TEST");
+//        todolist.addTodoItem(new TodoItem("1", false, "1"));
+//        todomanager.addTodoList(todolist);
+//        List<TodoItem> todo_items2 = new ArrayList<TodoItem>();
+//        TodoList todolist2 = new TodoList(todo_items2, "TEST2");
+//        todolist2.addTodoItem(new TodoItem("2", false, "2"));
+//        todomanager.addTodoList(todolist2);
+//        List<TodoItem> todo_items3 = new ArrayList<TodoItem>();
+//        TodoList todolist3 = new TodoList(todo_items3, "TEST3");
+//        todolist3.addTodoItem(new TodoItem("3", false, "3"));
+//        todomanager.addTodoList(todolist3);
+//        todomanager.writeTodos(getApplicationContext());
 
         // Set enter button to go instead of space/lower keyboard
         EditText todo = (EditText) findViewById(R.id.add_edittext);
@@ -52,31 +63,49 @@ public class MainActivity extends AppCompatActivity
                 return false;
             }
         });
+        initListOverview();
+        //TODO store current tab across activity lifecycle
+        initTodoOverView(todomanager.getCurrentTab());
+    }
 
-        // Populate the to-do list with stored items
-        populateTODO();
+    @Override
+    protected void onStop()
+    {
+        todomanager.writeTodos(this);
+        super.onStop();
     }
 
     @Override
     protected void onDestroy()
     {
-        // If app is closed, close the database as well
-        dbManager.close();
+        todomanager.writeTodos(this);
         super.onDestroy();
     }
 
-    // Function which retrieves the database information and sets the listview with it
-    private void populateTODO()
+    private void initListOverview()
     {
-        // Retrieve cursor with database information
-        cursor = dbManager.fetch();
+        ListView lv = (ListView) findViewById(R.id.todo_manager_list);
+        listsadapter = new ListsAdapter(getApplicationContext(), todomanager);
+        lv.setAdapter(listsadapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                todomanager.setCurrentTab(position);
+                initTodoOverView(position);
+            }
+        });
+    }
 
-        // Init adapter with cursor
-        adapter = new TodoAdapter(this, cursor, 0);
-
-        // Retrieve the ListView and set the adapter
+    // Function which retrieves the database information and sets the listview with it
+    private void initTodoOverView(int position)
+    {
         ListView lv = (ListView) findViewById(R.id.todo_list);
-        lv.setAdapter(adapter);
+        // get current todolist
+        TodoList todolist = todomanager.getTodoList(position);
+        todoadapter = new TodoAdapter(this, todolist);
+        lv.setAdapter(todoadapter);
 
         // If the user long clicks on a list item, ask if the user wants to delete the item, if yes delete the item
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
@@ -94,7 +123,7 @@ public class MainActivity extends AppCompatActivity
                     public void onClick (DialogInterface dialog, int which)
                     {
 
-                        removeToDo(id);
+                        removeToDo(position);
                     }
                 });
                 builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener()
@@ -128,23 +157,23 @@ public class MainActivity extends AppCompatActivity
         }
         else
         {
-            // If so, insert into database and renew the cursor and adapter because the data changed
-            dbManager.insert(todo_item);
-            cursor = dbManager.fetch();
-            adapter.changeCursor(cursor);
-            adapter.notifyDataSetChanged();
+            TodoList todolist = todomanager.getTodoList(todomanager.getCurrentTab());
+            //TODO NEW SCREEN FOR ADDING TODO ITEMS
+            todolist.addTodoItem(new TodoItem(todo_item, false, "Placeholder"));
+            todomanager.updateTodoList(todomanager.getCurrentTab(), todolist);
+            todoadapter.notifyDataSetChanged();
+            return;
         }
     }
 
     // Function to remove an item from the to-do list
-    public void removeToDo(long id)
+    public void removeToDo(int position)
     {
-        // Delete the item with the correct id
-        dbManager.delete(id);
-        // Renew the cursor and adapter because the data set changed
-        cursor = dbManager.fetch();
-        adapter.changeCursor(cursor);
-        adapter.notifyDataSetChanged();
+        TodoList todolist = todomanager.getTodoList(todomanager.getCurrentTab());
+        todolist.removeTodoItem(position);
+        todomanager.updateTodoList(todomanager.getCurrentTab(), todolist);
+        todoadapter.notifyDataSetChanged();
+        return;
     }
 
     public void setStrikeThrough(long id)

@@ -1,6 +1,8 @@
 package terstall.jeroenterstall_pset4;
 
-public class TodoItem
+import java.io.Serializable;
+
+public class TodoItem implements Serializable
 {
     private String title;
     private String description;

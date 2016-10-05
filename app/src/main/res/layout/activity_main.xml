@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         class="terstall.jeroenterstall_pset4.TodoManagerFragment"
         android:id="@+id/fragment"
-        android:layout_weight="0.6"
+        android:layout_weight="0.7"
         tools:layout="@layout/todo_manager_fragment"/>
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         class="terstall.jeroenterstall_pset4.TodoListFragment"
         android:id="@+id/fragment2"
-        android:layout_weight="0.4"
+        android:layout_weight="0.3"
         tools:layout="@layout/todo_list_fragment"/>
 </LinearLayout>
