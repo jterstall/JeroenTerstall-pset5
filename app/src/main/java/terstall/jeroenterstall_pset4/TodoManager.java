@@ -59,6 +59,19 @@ public class TodoManager
         {
             e.printStackTrace();
         }
+        if(todomanager.size() == 0)
+        {
+            List<TodoItem> todo_items = new ArrayList<TodoItem>();
+            TodoItem item1 = new TodoItem("This an app which lets you create multiple lists", false, "");
+            TodoItem item2 = new TodoItem("Long click an item in the navigation bar / list to delete it", false, "");
+            TodoItem item3 = new TodoItem("Click the plus button in the navigation bar/ list to add a list / an item", false, "");
+            todo_items.add(item1);
+            todo_items.add(item2);
+            todo_items.add(item3);
+            TodoList todolist = new TodoList(todo_items, "Explanation");
+            todomanager.add(todolist);
+
+        }
     }
 
     protected boolean writeTodos(Context context)
@@ -110,6 +123,16 @@ public class TodoManager
         }
         todomanager.add(todolist);
         return true;
+    }
+
+    protected boolean removeTodoList(int position)
+    {
+        if(position < todomanager.size() && todomanager.size() > 0)
+        {
+            todomanager.remove(position);
+            return true;
+        }
+        return false;
     }
 
     protected boolean updateTodoList(int position, TodoList todolist)

@@ -1,7 +1,7 @@
 package terstall.jeroenterstall_pset4;
 
 import android.content.Context;
-import android.database.Cursor;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +58,10 @@ public class TodoAdapter extends BaseAdapter implements ListAdapter
 
         final String todo_item = todolist.getTodoItem(position).getTitle();
         todo.setText(todo_item);
+        if(todolist.getTodoItem(position).getStatus())
+        {
+            todo.setPaintFlags(todo.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        }
 
         // Retrieve check icon and set a click listener which removes the to-do item if clicked
         ImageView check = (ImageView) view.findViewById(R.id.check);

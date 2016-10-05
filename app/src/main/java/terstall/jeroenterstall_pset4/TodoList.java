@@ -29,11 +29,6 @@ public class TodoList implements Serializable
         todolist.add(todoitem);
     }
 
-    protected void clearTodoList()
-    {
-        todolist.clear();
-    }
-
     protected String getTitle()
     {
         return title;

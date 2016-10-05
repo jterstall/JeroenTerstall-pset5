@@ -75,6 +75,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_7d658d8dc7b108bf7fd288363a263fcff4ea5d2a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset4/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -196,8 +205,17 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="6d8859fa18eb940c71ceca0604acdbef7a0458e5">
+        sha1="0ac129a87de8a9a6dda4c12650dffeec1b55595d">
         <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_08d2867936be2c71553f9137f90477b11505ac60/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_9ecb29ec1d4261334d8b8fac1277d33b9bcb7ae4/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -259,7 +277,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="ca67707cee37a61de4bfeb5be5f3032295f4a962">
+        sha1="b7d47acbf06d70a9f63ee96b457edac22dfb4ac3">
         <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cdccb839de3e5a5f019d56cdaa25191294c704ef/classes.dex" />
     </item>
     <item
