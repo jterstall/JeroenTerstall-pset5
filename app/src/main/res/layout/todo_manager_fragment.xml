@@ -1,0 +1,24 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_circle_black_24dp"/>
+    <ScrollView
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/todo_scroll"
+        android:fillViewport="true">
+        <ListView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:choiceMode="singleChoice"
+            android:id="@+id/todo_manager_list">
+        </ListView>
+    </ScrollView>
+</RelativeLayout>

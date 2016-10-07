@@ -24,6 +24,7 @@ import java.util.List;
 
 // Jeroen Terstall
 //TODO COMMENTS
+//TODO FRAGMENTS
 //TODO VARIABLE NAMEN VERBETEREN
 //TODO FUNCTIE STRUCTUUR VERBETEREN
 public class MainActivity extends AppCompatActivity
