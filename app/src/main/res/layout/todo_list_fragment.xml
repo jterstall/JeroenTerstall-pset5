@@ -7,7 +7,7 @@
     android:descendantFocusability="beforeDescendants"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="terstall.jeroenterstall_pset4.MainActivity">
+    tools:context="terstall.jeroenterstall_pset5.MainActivity">
     <ImageView
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

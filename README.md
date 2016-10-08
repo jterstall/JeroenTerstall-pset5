@@ -1,4 +1,6 @@
-This app is a simple to-do list.
-The user can check off items, remove items and add items to the list.
+This app is a list manager for simple text based lists.
+The user can add lists and remove lists.
+The user can also add items, remove items and check off items in those lists.
 
-![ToDo_List](ToDo_List.png)
+![MainScreen](doc/MainScreen.png)
+![SideBar](doc/SideBar.png)

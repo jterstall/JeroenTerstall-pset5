@@ -7,7 +7,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="terstall.jeroenterstall_pset4.TodoListFragment"
+        class="terstall.jeroenterstall_pset5.TodoListFragment"
         android:id="@+id/todolistfragment">
     </fragment>
 
@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="left"
         android:layout_height="match_parent"
-        class="terstall.jeroenterstall_pset4.TodoManagerFragment"
+        class="terstall.jeroenterstall_pset5.TodoManagerFragment"
         android:id="@+id/todomanagerfragment">
     </fragment>
 
