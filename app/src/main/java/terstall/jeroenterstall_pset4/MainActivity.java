@@ -1,6 +1,7 @@
 package terstall.jeroenterstall_pset4;
 
 
+import android.support.v4.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -27,10 +28,11 @@ import java.util.List;
 //TODO FRAGMENTS
 //TODO VARIABLE NAMEN VERBETEREN
 //TODO FUNCTIE STRUCTUUR VERBETEREN
+//TODO CHECK FIXEN
 public class MainActivity extends AppCompatActivity
 {
     // Init variables for the listview and database
-    private TodoManager todomanager;
+    protected TodoManager todomanager;
     private ListsAdapter listsadapter;
     private TodoAdapter todoadapter;
     private ActionBarDrawerToggle drawerToggle;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         todomanager.readTodos(getApplicationContext());
 
         setActionBar();
-        initListOverview();
+//        initListOverview();
         initTodoOverView(todomanager.getCurrentTab());
     }
 
@@ -97,59 +99,8 @@ public class MainActivity extends AppCompatActivity
         drawerToggle.syncState();
     }
 
-    private void initListOverview()
-    {
-        ListView lv = (ListView) findViewById(R.id.todo_manager_list);
-        LayoutInflater inflater = getLayoutInflater();
-        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header, null);
-        lv.addHeaderView(header, null, false);
-        listsadapter = new ListsAdapter(getApplicationContext(), todomanager);
-        lv.setAdapter(listsadapter);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                // Ignore header as a list item so decrease position by 1
-                position -= 1;
-                todomanager.setCurrentTab(position);
-                initTodoOverView(position);
-            }
-        });
-        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
-        {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                final int new_position = position - 1;
-                // Ask confirmation for deleting the item with an alert dialog
-                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(MainActivity.this, R.style.Dialog));
-                builder.setMessage("Do you really want to remove this list");
-                builder.setTitle("Confirmation");
-                builder.setPositiveButton("DELETE", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick (DialogInterface dialog, int which)
-                    {
-                        removeList(new_position);
-                    }
-                });
-                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-                        return;
-                    }
-                });
-                builder.show();
-                return true;
-            }
-        });
-    }
-
     // Function which retrieves the database information and sets the listview with it
-    private void initTodoOverView(int position)
+    public void initTodoOverView(int position)
     {
         ListView lv = (ListView) findViewById(R.id.todo_list);
         // get current todolist
@@ -259,46 +210,7 @@ public class MainActivity extends AppCompatActivity
 
     public void addList(View view)
     {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Add list");
-        final EditText input = new EditText(this);
-        input.setInputType(InputType.TYPE_CLASS_TEXT);
-        input.setHint("List title");
-        builder.setView(input, 30, 0, 30, 0);
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener()
-        {
-            @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
-                String list_title = input.getText().toString();
-                if(list_title.trim().length() == 0)
-                {
-                    Toast toast = Toast.makeText(getApplicationContext(), "No title filled in", Toast.LENGTH_SHORT);
-                    toast.show();
-                }
-                else
-                {
-                    List<TodoItem> todo_items = new ArrayList<TodoItem>();
-                    TodoList todolist = new TodoList(todo_items, list_title);
-                    todomanager.addTodoList(todolist);
-                    listsadapter.notifyDataSetChanged();
-                }
-            }
-        });
-        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener()
-        {
-            @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
-                dialog.cancel();
-            }
-        });
-        builder.show();
-    }
-
-    public void removeList(int position)
-    {
-        todomanager.removeTodoList(position);
-        listsadapter.notifyDataSetChanged();
+        TodoManagerFragment fragment = (TodoManagerFragment) getSupportFragmentManager().findFragmentById(R.id.todomanagerfragment);
+        fragment.addList(view);
     }
 }
