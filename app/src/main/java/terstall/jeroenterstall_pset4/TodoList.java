@@ -3,6 +3,8 @@ package terstall.jeroenterstall_pset4;
 import java.io.Serializable;
 import java.util.List;
 
+// Simple class which holds a complete list, which is a list of TodoItem objects
+// Functions are pretty self-explanatory
 public class TodoList implements Serializable
 {
     private List<TodoItem> todolist;

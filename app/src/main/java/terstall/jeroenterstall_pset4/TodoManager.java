@@ -11,8 +11,11 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+// Singleton class which handles persistence of data for the TodoLists
+
 public class TodoManager
 {
+    // Variables initialized
     private static TodoManager instance = null;
     private List<TodoList> todomanager = new ArrayList<TodoList>();
     private String save_file = "lists.data";
@@ -22,11 +25,13 @@ public class TodoManager
     private ObjectInputStream in;
     private int currentTab;
 
+    // Prevent constructor from being used to initialize
     private TodoManager()
     {
 
     }
 
+    // Get instance if previously created, else create new instance
     public static TodoManager getInstance()
     {
         if(instance == null)
@@ -36,6 +41,7 @@ public class TodoManager
         return instance;
     }
 
+    // Read in the list items from the data file
     protected void readTodos(Context context)
     {
         try
@@ -59,6 +65,7 @@ public class TodoManager
         {
             e.printStackTrace();
         }
+        // If no data was found, create a example list with instructions
         if(todomanager.size() == 0)
         {
             List<TodoItem> todo_items = new ArrayList<TodoItem>();
@@ -74,8 +81,10 @@ public class TodoManager
         }
     }
 
+    // Write in new lists to data file
     protected boolean writeTodos(Context context)
     {
+        // If nothing to write, do nothing
         if(todomanager.size() == 0)
         {
             System.out.println("Nothing to write");
@@ -103,6 +112,7 @@ public class TodoManager
         }
     }
 
+    // Return todolist at certain position
     protected TodoList getTodoList(int position)
     {
         if(todomanager.size() > 0 && position < todomanager.size())
@@ -112,6 +122,7 @@ public class TodoManager
         return null;
     }
 
+    // Add todolist to list of todolists
     protected boolean addTodoList(TodoList todolist)
     {
         for(TodoList list: todomanager)
@@ -125,6 +136,7 @@ public class TodoManager
         return true;
     }
 
+    // Remove a todolist at a certain position
     protected boolean removeTodoList(int position)
     {
         if(position < todomanager.size() && todomanager.size() > 0)
@@ -135,6 +147,7 @@ public class TodoManager
         return false;
     }
 
+    // Update a todolist with items changed
     protected boolean updateTodoList(int position, TodoList todolist)
     {
         if(position < todomanager.size() && todomanager.size() > 0)
@@ -150,11 +163,13 @@ public class TodoManager
         return todomanager.size();
     }
 
+    // Keep track of which todolist is currently on the foreground of the app
     protected int getCurrentTab()
     {
         return currentTab;
     }
 
+    // Function to set active todolist
     protected void setCurrentTab(int tab)
     {
         currentTab = tab;

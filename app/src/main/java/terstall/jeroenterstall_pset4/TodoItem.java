@@ -2,6 +2,7 @@ package terstall.jeroenterstall_pset4;
 
 import java.io.Serializable;
 
+// Simple class which holds a single to-do item object, functions are self-explanatory
 public class TodoItem implements Serializable
 {
     private String title;

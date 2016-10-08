@@ -56,14 +56,21 @@ public class TodoAdapter extends BaseAdapter implements ListAdapter
         // Retrieve TextView object and change the text to the to do item
         final TextView todo = (TextView) view.findViewById(R.id.todo_item);
 
+        // Set text for to-do items
         final String todo_item = todolist.getTodoItem(position).getTitle();
         todo.setText(todo_item);
+
+        // Set strikethrough of text based on if it is completed or not
         if(todolist.getTodoItem(position).getStatus())
         {
             todo.setPaintFlags(todo.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }
+        else
+        {
+            todo.setPaintFlags(todo.getPaintFlags() & (~ Paint.STRIKE_THRU_TEXT_FLAG));
+        }
 
-        // Retrieve check icon and set a click listener which removes the to-do item if clicked
+        // Retrieve check icon and set a click listener which strikethroughs the to-do item if clicked
         ImageView check = (ImageView) view.findViewById(R.id.check);
         check.setOnClickListener(new View.OnClickListener()
         {

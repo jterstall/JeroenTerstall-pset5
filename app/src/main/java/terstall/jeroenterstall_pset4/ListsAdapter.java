@@ -48,6 +48,7 @@ public class ListsAdapter extends BaseAdapter implements ListAdapter
             view = inflater.inflate(R.layout.all_lists_item, null);
         }
 
+        // Set item in list with text
         TextView listItem = (TextView) view.findViewById(R.id.lists_item);
         listItem.setText(todomanager.getTodoList(position).getTitle());
         return view;

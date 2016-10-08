@@ -18,8 +18,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+// Fragment which handles the list which contains all todolists
 public class TodoManagerFragment extends Fragment
 {
+    // Init variables
     MainActivity ma;
     ListView lv;
     ListsAdapter listsadapter;
@@ -29,20 +31,27 @@ public class TodoManagerFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup parentViewGroup, Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(R.layout.todo_manager_fragment, parentViewGroup, false);
+        // When fragment is created assign listview
         lv = (ListView) rootView.findViewById(R.id.todo_manager_list);
         return rootView;
     }
 
+
+    // When activity is created, populate the list
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
+        // Add header to list with add button
         LayoutInflater inflater = getLayoutInflater(savedInstanceState);
-        todomanager = TodoManager.getInstance();
         ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header, null);
         lv.addHeaderView(header, null, false);
+        // Retrieve current instance of todolists
+        todomanager = TodoManager.getInstance();
+        // Set adapter to listview
         listsadapter = new ListsAdapter(getActivity().getBaseContext(), todomanager);
         lv.setAdapter(listsadapter);
+        // Listen for clicks to different lists and initialize that list which is clicked
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
@@ -51,16 +60,17 @@ public class TodoManagerFragment extends Fragment
                 // Ignore header as a list item so decrease position by 1
                 position -= 1;
                 todomanager.setCurrentTab(position);
-                ma.initTodoOverView(position);
+                ma.initTodoList();
             }
         });
+        // Listen for long clicks to remove a list
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
         {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id)
             {
                 final int new_position = position - 1;
-                // Ask confirmation for deleting the item with an alert dialog
+                // Ask confirmation for deleting the list with an alert dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(), R.style.Dialog));
                 builder.setMessage("Do you really want to remove this list");
                 builder.setTitle("Confirmation");
@@ -87,6 +97,8 @@ public class TodoManagerFragment extends Fragment
         });
     }
 
+    // When fragment is attached also initialize the main activity, which is used to call functions
+    // from the main activity
     @Override
     public void onAttach(Context context)
     {
@@ -101,8 +113,10 @@ public class TodoManagerFragment extends Fragment
         }
     }
 
+    // Add a new list to the list of todolists
     public void addList(View view)
     {
+        // Ask for user input in an alertdialog
         AlertDialog.Builder builder = new AlertDialog.Builder(ma);
         builder.setTitle("Add list");
         final EditText input = new EditText(ma);
@@ -122,6 +136,7 @@ public class TodoManagerFragment extends Fragment
                 }
                 else
                 {
+                    // Add new list
                     List<TodoItem> todo_items = new ArrayList<TodoItem>();
                     TodoList todolist = new TodoList(todo_items, list_title);
                     todomanager.addTodoList(todolist);
