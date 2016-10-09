@@ -205,7 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="c00d8add28a9c8d920a71c16d0d4ecca63a51222">
+        sha1="3bb4075e2ddf3fe9cf4eaf55cdf228753c08476f">
         <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_08d2867936be2c71553f9137f90477b11505ac60/classes.dex" />
     </item>
     <item
@@ -277,7 +277,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="15499b484ab6d1d8ffbd3dcfd32474ef041366d4">
+        sha1="d6512426f675007d091201c9229a676ba3ca3681">
         <dex dex="/home/neoray/Documents/App Studio/JeroenTerstall-pset5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cdccb839de3e5a5f019d56cdaa25191294c704ef/classes.dex" />
     </item>
     <item

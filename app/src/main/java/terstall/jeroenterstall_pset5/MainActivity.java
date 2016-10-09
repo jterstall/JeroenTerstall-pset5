@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         // Read in current lists
         todomanager = TodoManager.getInstance();
         todomanager.readTodos(getApplicationContext());
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         // Fragments used
         todolistfragment = (TodoListFragment) getSupportFragmentManager().findFragmentById(R.id.todolistfragment);
@@ -38,6 +38,35 @@ public class MainActivity extends AppCompatActivity
 
         // Set the toolbar
         setActionBar();
+    }
+
+    @Override
+    protected void onResume()
+    {
+        todomanager.readTodos(this);
+        super.onResume();
+    }
+
+
+    @Override
+    protected void onPause()
+    {
+        todomanager.writeTodos(this);
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart()
+    {
+        todomanager.readTodos(this);
+        super.onStart();
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        todomanager.readTodos(this);
+        super.onRestart();
     }
 
     @Override

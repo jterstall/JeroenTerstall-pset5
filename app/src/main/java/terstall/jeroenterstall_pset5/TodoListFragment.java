@@ -41,6 +41,22 @@ public class TodoListFragment extends Fragment
         initTodoList();
     }
 
+    // When fragment is attached create the activity from main activity so functions can be called
+    // from the main activity
+    @Override
+    public void onAttach(Context context)
+    {
+        super.onAttach(context);
+        try
+        {
+            ma = (MainActivity) getActivity();
+        }
+        catch (ClassCastException e)
+        {
+            System.out.println(e);
+        }
+    }
+
     // Function to initialize the todolist
     public void initTodoList()
     {
@@ -135,7 +151,6 @@ public class TodoListFragment extends Fragment
         // update the correct list and notify the data set
         todomanager.updateTodoList(todomanager.getCurrentTab(), todolist);
         todoadapter.notifyDataSetChanged();
-        return;
     }
 
     // Sets a to-do item as finished by converting the text to strikethrough
@@ -147,29 +162,15 @@ public class TodoListFragment extends Fragment
         if(todolist.getTodoItem(position).getStatus())
         {
             todolist.getTodoItem(position).setNotCompleted();
+            todomanager.updateTodoList(todomanager.getCurrentTab(), todolist);
         }
         // If the item was not completed...
         else
         {
             todolist.getTodoItem(position).setCompleted();
+            todomanager.updateTodoList(todomanager.getCurrentTab(), todolist);
         }
         todoadapter.notifyDataSetChanged();
-        return;
-    }
-
-    // When fragment is attached create the activity from main activity so functions can be called
-    // from the main activity
-    @Override
-    public void onAttach(Context context)
-    {
-        super.onAttach(context);
-        try
-        {
-            ma = (MainActivity) getActivity();
-        }
-        catch (ClassCastException e)
-        {
-            System.out.println(e);
-        }
+        initTodoList();
     }
 }

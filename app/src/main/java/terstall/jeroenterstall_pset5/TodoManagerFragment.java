@@ -81,6 +81,12 @@ public class TodoManagerFragment extends Fragment
                     {
                         todomanager.removeTodoList(new_position);
                         listsadapter.notifyDataSetChanged();
+                        // Set current tab to first list if current tab is deleted
+                        if(new_position == todomanager.getCurrentTab())
+                        {
+                            todomanager.setCurrentTab(todomanager.size() - 1);
+                            ma.initTodoList();
+                        }
                     }
                 });
                 builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener()
